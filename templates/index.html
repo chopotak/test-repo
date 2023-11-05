@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Содержимое базы данных</title>
+</head>
+<body>
+    <h1>Фильмы в базе данных:</h1>
+    <ul>
+        {% for row in data %}
+            <li>
+                <strong>Фильм:</strong> {{ row[1] }}<br>
+                <strong>Описание:</strong> {{ row[2] }}<br>
+                <strong>Год выпуска:</strong> {{ row[3] }}<br>
+                <strong>Рейтинг:</strong> {{ row[4] }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
